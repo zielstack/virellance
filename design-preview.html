@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virellance Medical Technologies — UI Design Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #060b17;
+      color: #f8fafc;
+      padding: 2.5rem 1.5rem;
+    }
+    .header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #00f2fe;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 40%, #00f2fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.lead {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #0d162c;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #00f2fe;
+      box-shadow: 0 15px 40px rgba(0, 242, 254, 0.2);
+    }
+    .card-img-wrap {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .card-img-wrap img {
+      transform: scale(1.05);
+    }
+    .card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .badge-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+    p.desc {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .features {
+      list-style: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .features li::before {
+      content: '✓ ';
+      color: #10b981;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: linear-gradient(135deg, #00f2fe, #10b981);
+      color: #060b17;
+      transition: opacity 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <span class="tag">Design Selection</span>
+    <h1>Virellance Medical Technologies Mockups</h1>
+    <p class="lead">Nandito ang 3 nabuong high-resolution design concepts. Piliin ang nais mong gamitin para sa kabuuang website redesign.</p>
+  </div>
+
+  <div class="grid">
+    <!-- Concept 1 -->
+    <div class="card">
+      <div class="card-img-wrap" onclick="window.open('./assets/design-concepts/concept-1-deep-tech.jpg', '_blank')">
+        <img src="./assets/design-concepts/concept-1-deep-tech.jpg" alt="Concept 1: Bio-Luminescent Deep Tech">
+      </div>
+      <div class="card-body">
+        <div class="badge-num">Option 1</div>
+        <h2>Bio-Luminescent Deep Tech</h2>
+        <p class="desc">Cinematic dark mode na may deep obsidian background, glowing cyan at bio-emerald neural nodes, floating 3D microbial clusters, at luxury editorial typography.</p>
+        <ul class="features">
+          <li>Deep obsidian navy (#060B14)</li>
+          <li>Glowing biocomputing telemetry</li>
+          <li>High-end editorial serif headlines</li>
+        </ul>
+        <a href="./assets/design-concepts/concept-1-deep-tech.jpg" target="_blank" class="btn">Tingnan ang Buong Imahe (Full Size)</a>
+      </div>
+    </div>
+
+    <!-- Concept 2 -->
+    <div class="card">
+      <div class="card-img-wrap" onclick="window.open('./assets/design-concepts/concept-2-swiss-clinical.jpg', '_blank')">
+        <img src="./assets/design-concepts/concept-2-swiss-clinical.jpg" alt="Concept 2: Swiss Clean Clinical Precision">
+      </div>
+      <div class="card-body">
+        <div class="badge-num">Option 2</div>
+        <h2>Swiss Clean Clinical Precision</h2>
+        <p class="desc">Ultra-clean pure clinical white background, modern modular bento grid, crisp high-contrast data charts, at international Swiss grotesque typography.</p>
+        <ul class="features">
+          <li>Pure clinical white & ice-gray</li>
+          <li>Modular bento grid structure</li>
+          <li>Cobalt blue & bio-green accents</li>
+        </ul>
+        <a href="./assets/design-concepts/concept-2-swiss-clinical.jpg" target="_blank" class="btn">Tingnan ang Buong Imahe (Full Size)</a>
+      </div>
+    </div>
+
+    <!-- Concept 3 -->
+    <div class="card">
+      <div class="card-img-wrap" onclick="window.open('./assets/design-concepts/concept-2b-clinical-light.jpg', '_blank')">
+        <img src="./assets/design-concepts/concept-2b-clinical-light.jpg" alt="Concept 3: Crystalline Light Biopharma">
+      </div>
+      <div class="card-body">
+        <div class="badge-num">Option 3</div>
+        <h2>Crystalline Light Biopharma</h2>
+        <p class="desc">Pearl white at translucent ice-blue glass, floating crystalline DNA molecular structures, at ultra-sleek minimalist laboratory aesthetics.</p>
+        <ul class="features">
+          <li>Pearl ice-blue glassmorphism</li>
+          <li>Crystalline DNA focal graphics</li>
+          <li>Refined clinical authority</li>
+        </ul>
+        <a href="./assets/design-concepts/concept-2b-clinical-light.jpg" target="_blank" class="btn">Tingnan ang Buong Imahe (Full Size)</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

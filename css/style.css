@@ -1,0 +1,4159 @@
+/* ==========================================================================
+   VIRELLANCE MEDICAL TECHNOLOGIES — Master Medical Technology Identity & Visual System
+   Art Direction: Premium International Medical Technologies & Healthcare Systems Institution
+   Typography: Albert Sans (Primary Display/Headings) + Instrument Sans (Body) + IBM Plex Mono (Technical)
+   Palette: Deep Midnight Navy, Rich Teal, Vibrant Turquoise, Refined Cyan, Soft Ice Blue, Clean White & Emerald
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Design Tokens & Precision Medical Technology Palette
+   -------------------------------------------------------------------------- */
+:root {
+  /* ==========================================================================
+     NEW COLOR IDENTITY — VIRELLANCE MEDICAL TECHNOLOGIES
+     Primary background: Clean medical white (#F7FAFC)
+     Secondary background: Very light cool blue (#EAF2F6)
+     Dark contrast sections: Deep midnight navy (#10283D)
+     Primary accent: Professional medical teal (#168C91)
+     Secondary accent: Muted aqua (#70C5C1)
+     Main text on light backgrounds: Deep navy (#142B40)
+     Secondary text: Slate blue-gray (#647789)
+     Borders and dividers: Soft blue-gray (#D7E2E9)
+     ========================================================================== */
+
+  /* Surfaces & Canvases */
+  --bg-primary: #F7FAFC;
+  --bg-secondary: #EAF2F6;
+  --bg-white: #FFFFFF;
+  --bg-dark-navy: #10283D;
+  --bg-dark-navy-deep: #0B1B2B;
+  --bg-dark-navy-surface: #15344F;
+  --bg-dark-navy-elevated: #1B4365;
+
+  /* Backward-compatible surface mappings */
+  --bg-navy-darkest: #0B1B2B;
+  --bg-navy-deep: #10283D;
+  --bg-navy-canvas: #15344F;
+  --bg-navy-surface: #1B4365;
+  --bg-navy-card: #15344F;
+  --bg-navy-elevated: #204E75;
+
+  /* Clinical Light Canvases */
+  --bg-ice-canvas: #F7FAFC;
+  --bg-ice-subtle: #EAF2F6;
+  --bg-ice-surface: #FFFFFF;
+  --bg-ice-card: #FFFFFF;
+
+  /* Ink & Typography — Dark Backgrounds */
+  --ink-on-dark-primary: #FFFFFF;
+  --ink-on-dark-secondary: #D7E2E9;
+  --ink-on-dark-muted: #8FA4B5;
+  --ink-on-dark-faint: #647789;
+
+  /* Ink & Typography — Light Backgrounds */
+  --text-primary: #142B40;
+  --text-secondary: #647789;
+  --text-muted: #8FA4B5;
+  --ink-on-light-primary: #142B40;
+  --ink-on-light-secondary: #647789;
+  --ink-on-light-muted: #8FA4B5;
+  --ink-on-light-faint: #B0C0CC;
+
+  /* Medical Technology Color Accents */
+  --color-teal: #168C91;
+  --color-teal-dark: #127276;
+  --color-teal-rich: #168C91;
+  --color-teal-vibrant: #168C91;
+  --color-aqua: #70C5C1;
+  --color-turquoise: #70C5C1;
+  --color-turquoise-bright: #70C5C1;
+  --color-cyan: #70C5C1;
+  --color-cyan-soft: #70C5C1;
+  --color-ice-blue: #EAF2F6;
+  --color-emerald-deep: #127276;
+  --color-emerald: #168C91;
+  --color-emerald-light: #70C5C1;
+
+  /* Borders & Dividers */
+  --border-color: #D7E2E9;
+  --border-light-hairline: #D7E2E9;
+  --border-light-medium: #D7E2E9;
+  --border-light-ice: #D7E2E9;
+
+  --border-dark-hairline: rgba(215, 226, 233, 0.15);
+  --border-dark-medium: rgba(215, 226, 233, 0.25);
+  --border-cyan-glow: rgba(112, 197, 193, 0.25);
+  --border-teal-glow: rgba(22, 140, 145, 0.25);
+
+  /* ==========================================================================
+     UNIFIED MEDICAL TECHNOLOGY TYPOGRAPHY SYSTEM
+     Primary Sans: Instrument Sans (Navigation, Body, Labels, Badges, Buttons, UI)
+     Editorial Display: Albert Sans (Headings, Major Section Titles, Modal Titles)
+     Scientific Monospace: IBM Plex Mono (Genomic Clades, Telemetry, Accessions ONLY)
+     ========================================================================== */
+  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: var(--font-sans);
+  --font-primary: var(--font-sans);
+  --font-display: 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, Menlo, monospace;
+
+  /* Typographic Scale Tokens */
+  --text-xs: 0.75rem;          /* 12px: Eyebrows, micro-labels, badges */
+  --text-sm: 0.8125rem;        /* 13px: Metadata, secondary notes, compact buttons */
+  --text-base: 0.9375rem;      /* 15px: Standard body copy, navigation */
+  --text-md: 1.0625rem;        /* 17px: Lead copy, card subtitles */
+  --text-lg: 1.25rem;          /* 20px: Card titles, medium subheadings */
+  --text-xl: 1.5rem;           /* 24px: Minor section titles, sub-headers */
+  --text-2xl: clamp(1.85rem, 2.8vw, 2.35rem);  /* Chapter headlines, modal titles */
+  --text-3xl: clamp(2.1rem, 3.4vw, 2.85rem);   /* Section titles, executive display names */
+  --text-hero: clamp(2.4rem, 4.2vw, 3.8rem);   /* Hero monumental title, platform headline */
+
+  /* Proportions & Radii (Sculpted, Architectural) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-pill: 9999px;
+
+  /* Shadows (Depth & Subtle Clinical Elevation — No Neon) */
+  --shadow-subtle: 0 2px 8px rgba(20, 43, 64, 0.04), 0 0 1px rgba(20, 43, 64, 0.08);
+  --shadow-medium: 0 12px 32px -4px rgba(20, 43, 64, 0.08), 0 0 1px 1px #D7E2E9;
+  --shadow-elevated: 0 20px 48px -10px rgba(20, 43, 64, 0.12);
+  --shadow-glow-teal: 0 4px 16px rgba(22, 140, 145, 0.2);
+  --shadow-glow-cyan: 0 4px 16px rgba(112, 197, 193, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Baseline
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  padding-top: 74px;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --------------------------------------------------------------------------
+   Headings & Typography Hierarchy
+   Editorial Display Sans: Albert Sans
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.section-clinical-light h1,
+.section-clinical-light h2,
+.section-clinical-light h3,
+.section-clinical-light h4,
+.section-clinical-light h5,
+.section-clinical-light h6,
+.section-white-clean h1,
+.section-white-clean h2,
+.section-white-clean h3,
+.section-white-clean h4,
+.section-white-clean h5,
+.section-white-clean h6 {
+  color: var(--text-primary);
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Gradient text accent (dark contrast backgrounds) */
+.biotext-gradient {
+  background: linear-gradient(135deg, #FFFFFF 25%, #70C5C1 65%, #168C91 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* High-contrast gradient text accent for light/white backgrounds */
+.journey-prologue .biotext-gradient,
+.section-clinical-light .biotext-gradient,
+.section-white-clean .biotext-gradient {
+  background: linear-gradient(135deg, #142B40 0%, #168C91 60%, #70C5C1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers & Structural Dividers
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.section {
+  padding: 6.5rem 0;
+  position: relative;
+  scroll-margin-top: 86px;
+}
+
+/* Section Variation 1: Clean Light Cool Blue Clinical (Secondary Surface) */
+.section-clinical-light {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-clinical-light h1,
+.section-clinical-light h2,
+.section-clinical-light h3,
+.section-clinical-light h4 {
+  color: var(--text-primary);
+}
+
+/* Section Variation 2: Deep Midnight Navy (Selected High-Impact Contrast) */
+.section-navy-deep {
+  background-color: var(--bg-dark-navy);
+  color: var(--ink-on-dark-secondary);
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-navy-deep h1,
+.section-navy-deep h2,
+.section-navy-deep h3,
+.section-navy-deep h4 {
+  color: #FFFFFF;
+}
+
+/* Section Variation 3: Deep Midnight Navy Canvas */
+.section-navy-canvas {
+  background-color: var(--bg-dark-navy-deep);
+  color: var(--ink-on-dark-secondary);
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+}
+
+.section-navy-canvas h1,
+.section-navy-canvas h2,
+.section-navy-canvas h3,
+.section-navy-canvas h4 {
+  color: #FFFFFF;
+}
+
+/* Section Variation 4: Pure White Clinical */
+.section-white-clean {
+  background-color: var(--bg-white);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-white-clean h1,
+.section-white-clean h2,
+.section-white-clean h3,
+.section-white-clean h4 {
+  color: var(--text-primary);
+}
+
+/* Section Header Typography Blocks */
+.section-header-block {
+  margin-bottom: 3.75rem;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: var(--color-teal);
+}
+
+.section-label::after {
+  content: '';
+  display: inline-block;
+  width: 44px;
+  height: 1.5px;
+  background-color: var(--color-teal);
+}
+
+/* Label themes for light sections */
+.section-clinical-light .section-label,
+.section-white-clean .section-label {
+  color: var(--color-teal);
+}
+
+.section-clinical-light .section-label::after,
+.section-white-clean .section-label::after {
+  background-color: var(--color-teal);
+}
+
+/* Label themes for dark contrast sections */
+.section-navy-deep .section-label,
+.section-navy-canvas .section-label {
+  color: var(--color-aqua);
+}
+
+.section-navy-deep .section-label::after,
+.section-navy-canvas .section-label::after {
+  background-color: var(--color-aqua);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 3.4vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.section-navy-deep .section-title,
+.section-navy-canvas .section-title {
+  color: #FFFFFF;
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 740px;
+  margin-top: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.section-clinical-light .section-subtitle,
+.section-white-clean .section-subtitle {
+  color: var(--text-secondary);
+}
+
+.section-navy-deep .section-subtitle,
+.section-navy-canvas .section-subtitle {
+  color: #D7E2E9;
+}
+
+/* --------------------------------------------------------------------------
+   Sculpted Medical Technology Action Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.65rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+/* Primary Medical Technology Button: Professional Medical Teal */
+.btn-forest,
+.btn-teal {
+  background-color: var(--color-teal);
+  color: #FFFFFF;
+  border: 1px solid var(--color-teal);
+  box-shadow: 0 2px 8px rgba(22, 140, 145, 0.2);
+}
+
+.btn-forest:hover,
+.btn-teal:hover {
+  background-color: var(--color-teal-dark);
+  border-color: var(--color-teal-dark);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(22, 140, 145, 0.3);
+}
+
+/* Secondary Button on Dark: Navy Outline with Ice-Blue Ink */
+.btn-outline-dark,
+.btn-navy-outline {
+  background-color: rgba(21, 52, 79, 0.6);
+  color: #FFFFFF;
+  border: 1px solid rgba(215, 226, 233, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-dark:hover,
+.btn-navy-outline:hover {
+  background-color: rgba(21, 52, 79, 0.95);
+  border-color: var(--color-aqua);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Secondary Button on Light */
+.section-clinical-light .btn-outline-dark,
+.section-white-clean .btn-outline-dark {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.section-clinical-light .btn-outline-dark:hover,
+.section-white-clean .btn-outline-dark:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.35rem;
+  font-size: 0.8125rem;
+}
+
+.hero-subnote {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--ink-on-dark-muted);
+  line-height: 1.6;
+}
+
+.colophon-address {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--ink-on-dark-muted);
+  line-height: 1.7;
+}
+
+.colophon-dept-badge {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-ice-blue);
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Header / Masthead Architecture
+   -------------------------------------------------------------------------- */
+.site-masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 10px rgba(16, 40, 61, 0.05);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.site-masthead.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-bottom-color: var(--border-color);
+  box-shadow: 0 4px 20px rgba(20, 43, 64, 0.08);
+}
+
+.site-masthead .container {
+  max-width: 1480px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.5rem, 2.5vw, 2.75rem);
+  padding-right: clamp(1.5rem, 2.5vw, 2.75rem);
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  width: 100%;
+}
+
+.brand-masthead {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+  margin-right: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.brand-masthead:hover {
+  opacity: 0.9;
+}
+
+.brand-text-wrap {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand-descriptor {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.site-masthead nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.masthead-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 2vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.masthead-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.5rem 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.masthead-link:hover {
+  color: var(--color-teal);
+}
+
+.masthead-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.masthead-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0.2rem;
+  right: 0.2rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-teal);
+  box-shadow: none;
+  transition: width var(--transition-fast);
+}
+
+.masthead-link:hover::after,
+.masthead-link.active::after {
+  width: calc(100% - 0.4rem);
+}
+
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: clamp(1.25rem, 2.5vw, 2.5rem);
+  gap: 1rem;
+}
+
+.masthead-liaison-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  background-color: var(--color-teal);
+  border: 1px solid var(--color-teal);
+  padding: 0.58rem 1.35rem;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+}
+
+.masthead-liaison-btn:hover {
+  background-color: #117276;
+  border-color: #117276;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(22, 140, 145, 0.25);
+  transform: translateY(-1px);
+}
+
+.masthead-liaison-btn:hover {
+  background-color: var(--color-teal-dark);
+  border-color: var(--color-teal-dark);
+  color: #FFFFFF;
+}
+
+.mobile-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.mobile-toggle-btn:hover {
+  background-color: rgba(20, 43, 64, 0.05);
+  border-color: var(--color-teal);
+}
+
+.mobile-toggle-btn span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background-color: var(--text-primary);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-toggle-btn[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.mobile-toggle-btn[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle-btn[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-cta-item {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section: Deep Midnight Navy Canvas (#10283D) Contrast Anchor
+   -------------------------------------------------------------------------- */
+.hero-monumental {
+  padding-top: clamp(4.5rem, 6.5vw, 6rem);
+  padding-bottom: clamp(4.5rem, 6.5vw, 6rem);
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+  background-color: var(--bg-dark-navy);
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 86px;
+}
+
+/* Background Video Container & Ambient Canvas Layer */
+.hero-video-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.35;
+  filter: contrast(1.1) saturate(1.2);
+  pointer-events: none;
+}
+
+.hero-ambient-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(22, 140, 145, 0.25), transparent 70%),
+    radial-gradient(circle at 85% 30%, rgba(112, 197, 193, 0.15), transparent 50%),
+    linear-gradient(180deg, rgba(11, 27, 43, 0.45) 0%, rgba(16, 40, 61, 0.85) 75%, var(--bg-dark-navy) 100%);
+  pointer-events: none;
+}
+
+.hero-monumental .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-monumental::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(112, 197, 193, 0.25) 20%, rgba(112, 197, 193, 0.25) 80%, transparent);
+}
+
+.hero-top-stage {
+  margin-bottom: 3.5rem;
+}
+
+.hero-institutional-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-aqua);
+  background-color: rgba(112, 197, 193, 0.1);
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(112, 197, 193, 0.35);
+  border-radius: var(--radius-xs);
+  margin-bottom: 1.5rem;
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-aqua);
+  box-shadow: 0 0 8px var(--color-aqua);
+}
+
+.hero-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+  max-width: 1060px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-statement-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.hero-lead-text {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #D7E2E9;
+}
+
+.hero-action-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-btn-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Layered Panoramic Scientific Plate */
+.hero-visual-panoramic {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.panoramic-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 36vw, 420px);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(215, 226, 233, 0.2);
+  background-color: var(--bg-dark-navy-deep);
+  box-shadow: 0 16px 48px -10px rgba(11, 27, 43, 0.7);
+}
+
+.panoramic-frame img,
+.panoramic-frame video,
+.panoramic-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.04) saturate(1.1);
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.hero-visual-panoramic:hover .panoramic-frame img,
+.hero-visual-panoramic:hover .panoramic-frame video {
+  transform: scale(1.015);
+}
+
+.panoramic-tag-strip {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(4, 9, 20, 0.88);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--color-turquoise-bright);
+  backdrop-filter: blur(8px);
+}
+
+/* Overlapping Asymmetrical Layered Specs Card */
+.hero-overlapping-specs-card {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 2rem;
+  max-width: 490px;
+  width: calc(100% - 4rem);
+  background: rgba(9, 21, 40, 0.94);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  padding: 1.75rem 2rem;
+  box-shadow: 0 20px 48px -8px rgba(3, 8, 18, 0.7), 0 0 20px -2px rgba(6, 182, 212, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 10;
+}
+
+.specs-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-dark-hairline);
+}
+
+.specs-card-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.specs-card-code {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-turquoise-bright);
+  font-weight: 600;
+}
+
+.specs-trio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trio-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.trio-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-turquoise-bright);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.4);
+}
+
+.trio-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-on-dark-muted);
+  margin-top: 0.25rem;
+}
+
+.hero-buffer-space {
+  height: 3.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Section 01: The 5 Scientific Pillars as an Asymmetric Structural Matrix
+   Canvas: Soft Ice-Blue Clinical (#F4F8FB) with Sculpted High-End Cards
+   -------------------------------------------------------------------------- */
+.matrix-grid-asymmetric {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.matrix-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFCFE 100%);
+  border: 1px solid #DCE6EE;
+  padding: 2.75rem 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 16px -2px rgba(10, 22, 41, 0.04), 0 0 1px 1px rgba(207, 224, 236, 0.4);
+}
+
+.matrix-card:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 20px 40px -12px rgba(13, 148, 136, 0.18), 0 0 1px 1px var(--color-turquoise);
+  transform: translateY(-4px);
+}
+
+.matrix-card.span-12 {
+  grid-column: span 12;
+}
+
+.matrix-card.span-6 {
+  grid-column: span 6;
+}
+
+.matrix-card.featured-anchor {
+  background: #FFFFFF;
+  border-left: 3px solid var(--color-teal);
+  box-shadow: 0 4px 18px -2px rgba(10, 22, 41, 0.05);
+  padding: 3rem 2.75rem;
+}
+
+.featured-anchor-narrative {
+  max-width: 920px;
+}
+
+.matrix-card-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.matrix-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background: rgba(14, 131, 136, 0.06);
+  border: 1px solid rgba(14, 131, 136, 0.18);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.matrix-card:hover .matrix-icon-badge {
+  background: rgba(14, 131, 136, 0.12);
+  border-color: var(--color-teal);
+  color: var(--color-teal-dark);
+}
+
+.matrix-ordinal {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-teal);
+}
+
+.matrix-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+  color: var(--ink-on-light-primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.matrix-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink-on-light-secondary);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.matrix-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.35rem;
+  border-top: 1px solid #EEF2F6;
+}
+
+.matrix-chip-item {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  background-color: #F4F8FA;
+  border: 1px solid #DCE7ED;
+  color: #0F4C47;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.matrix-card:hover .matrix-chip-item:hover {
+  background-color: var(--color-teal);
+  border-color: var(--color-teal);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Section 01: The Five Pillars of Medical Device Excellence
+   Continuous Editorial Scientific Journey (Open, Unboxed, Distinctive Typography)
+   -------------------------------------------------------------------------- */
+
+.platform-journey {
+  position: relative;
+  scroll-margin-top: 86px;
+}
+
+/* ---- 00. Section Prologue (Grand Editorial Entrance) ---- */
+.journey-prologue {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 7rem 0 6rem;
+}
+
+.prologue-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.prologue-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.prologue-rule {
+  height: 1px;
+  width: 48px;
+  background-color: var(--color-teal);
+}
+
+.prologue-subtag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.prologue-headline-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4.5rem;
+  align-items: end;
+}
+
+.prologue-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.prologue-lead {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+}
+
+.prologue-context {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ---- Continuous Chapters Base ---- */
+.journey-chapter {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Deliberate Light-and-Dark Section Surfaces */
+.chapter-midnight {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chapter-light {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chapter-bioprocess {
+  background: radial-gradient(circle at 50% 100%, rgba(22, 140, 145, 0.12) 0%, rgba(16, 40, 61, 0) 70%), var(--bg-dark-navy);
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+}
+
+.chapter-symbiosis {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chapter-obsidian {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Chapter Split Layouts */
+.chapter-grid-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5.5rem;
+  align-items: center;
+}
+
+.chapter-grid-split.reverse-flow {
+  direction: rtl;
+}
+
+.chapter-grid-split.reverse-flow > * {
+  direction: ltr;
+}
+
+/* Distinctive Giant Numerals & Lockups */
+.chapter-numeral-lockup {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chapter-giant-num {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.chapter-midnight .chapter-giant-num {
+  color: var(--border-color);
+  text-shadow: none;
+}
+
+.chapter-light .chapter-giant-num {
+  color: var(--border-color);
+  text-shadow: none;
+}
+
+.chapter-bioprocess .chapter-giant-num {
+  color: rgba(112, 197, 193, 0.35);
+  text-shadow: 0 0 35px rgba(112, 197, 193, 0.18);
+}
+
+.chapter-symbiosis .chapter-giant-num {
+  color: var(--border-color);
+  text-shadow: none;
+}
+
+.chapter-obsidian .chapter-giant-num {
+  color: var(--border-color);
+  text-shadow: none;
+}
+
+.chapter-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chapter-discipline {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chapter-midnight .chapter-discipline,
+.chapter-light .chapter-discipline,
+.chapter-symbiosis .chapter-discipline,
+.chapter-obsidian .chapter-discipline {
+  color: var(--color-teal);
+}
+
+.chapter-bioprocess .chapter-discipline {
+  color: var(--color-aqua);
+}
+
+/* Clean Editorial Metadata */
+
+/* Chapter Headings & Editorial Typography */
+.chapter-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
+}
+
+.chapter-midnight .chapter-headline,
+.chapter-light .chapter-headline,
+.chapter-symbiosis .chapter-headline,
+.chapter-obsidian .chapter-headline {
+  color: var(--text-primary);
+}
+
+.chapter-bioprocess .chapter-headline {
+  color: #FFFFFF;
+}
+
+.chapter-lead {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 1.15rem;
+}
+
+.chapter-midnight .chapter-lead,
+.chapter-light .chapter-lead,
+.chapter-symbiosis .chapter-lead,
+.chapter-obsidian .chapter-lead {
+  color: var(--color-teal);
+}
+
+.chapter-bioprocess .chapter-lead {
+  color: var(--color-aqua);
+}
+
+.chapter-body {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.chapter-midnight .chapter-body,
+.chapter-light .chapter-body,
+.chapter-symbiosis .chapter-body,
+.chapter-obsidian .chapter-body {
+  color: var(--text-secondary);
+}
+
+.chapter-bioprocess .chapter-body {
+  color: var(--ink-on-dark-secondary);
+}
+
+/* Chapter 01: Open Data Stream */
+.chapter-data-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.75rem;
+}
+
+.stream-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+}
+
+.stream-index {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-teal);
+  min-width: 32px;
+}
+
+.stream-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.stream-text span {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Chapter 01: Open Microscopy Visual Stage (Zero boxes) */
+.bio-microscopy-stage {
+  position: relative;
+}
+
+.microscopy-image-blend {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(20, 43, 64, 0.08);
+}
+
+.microscopy-image-blend img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+/* Pure Uninterrupted Microscopy Image Blend */
+
+/* Chapter 02: Open Spec Columns */
+.chapter-spec-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.75rem;
+}
+
+.spec-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-teal);
+  margin-bottom: 0.35rem;
+}
+
+.spec-val {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-on-light-primary);
+  font-weight: 500;
+}
+
+/* Chapter 02: Open Cleanroom Stage */
+.cleanroom-visual-stage img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 16px 40px -8px rgba(10, 22, 41, 0.12);
+}
+
+/* Chapter 03: Panoramic Bioreactor Stage */
+.chapter-banner-header {
+  margin-bottom: 3.5rem;
+}
+
+.chapter-headline-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.chapter-headline-split .chapter-headline {
+  margin: 0;
+}
+
+.chapter-headline-split .chapter-lead {
+  margin: 0;
+}
+
+.panoramic-bioreactor-stage {
+  position: relative;
+}
+
+.panoramic-bioreactor-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+}
+
+.panoramic-bioreactor-wrap img,
+.panoramic-bioreactor-wrap video,
+    .spectroscopy-image-frame img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Pure Unobstructed Bioreactor Panorama */
+
+.panoramic-telemetry-overlay {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.telemetry-facet {
+  display: flex;
+  flex-direction: column;
+}
+
+.tf-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-teal-vibrant);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.tf-val {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+/* Chapter 04: Consortia Cascade Narrative */
+.consortia-cascade-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top: 1px solid var(--border-light-hairline);
+  padding-top: 1.75rem;
+}
+
+.cascade-stage {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+}
+
+.stage-num {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-teal-dark);
+  min-width: 20px;
+}
+
+.stage-info strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-on-light-primary);
+  margin-bottom: 0.2rem;
+}
+
+.stage-info p {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-on-light-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.open-schematic-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Chapter 05: Telemetry Standards Ledger */
+.telemetry-standards-ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.75rem;
+}
+
+.ledger-point {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(20, 184, 166, 0.35);
+}
+
+.lp-body strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.lp-body span {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-on-dark-muted);
+  line-height: 1.5;
+}
+
+.spectroscopy-image-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 16px 40px -8px rgba(3, 8, 18, 0.6);
+}
+
+.spectroscopy-image-frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.04) saturate(1.05);
+}
+
+/* Clean Editorial Captions (Unboxed, natural typography) */
+.chapter-caption {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  margin-top: 1.25rem;
+  font-style: normal;
+}
+
+.chapter-midnight .chapter-caption,
+.chapter-light .chapter-caption,
+.chapter-symbiosis .chapter-caption,
+.chapter-obsidian .chapter-caption {
+  color: var(--text-secondary);
+}
+
+.chapter-bioprocess .chapter-caption {
+  color: var(--ink-on-dark-muted);
+}
+
+/* Responsive Adaptations for Continuous Journey */
+@media (max-width: 1024px) {
+  .prologue-headline-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .chapter-grid-split {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .chapter-grid-split.reverse-flow {
+    direction: ltr;
+  }
+
+  .chapter-headline-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .panoramic-telemetry-overlay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-prologue {
+    padding: 5rem 0 4rem;
+  }
+
+  .journey-chapter {
+    padding: 5rem 0;
+  }
+
+  .chapter-numeral-lockup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .chapter-spec-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .panoramic-telemetry-overlay {
+    grid-template-columns: 1fr;
+  }
+
+  .microscopy-image-blend img,
+  .cleanroom-visual-stage img,
+  .panoramic-bioreactor-wrap img,
+.panoramic-bioreactor-wrap video,
+    .spectroscopy-image-frame img {
+    height: 320px;
+  }
+}
+/* --------------------------------------------------------------------------
+   Section 02: Clinical Equipment Console (Clean Medical White Surface with Technical Deep Navy Cockpit)
+   -------------------------------------------------------------------------- */
+#workbench,
+.section-workbench {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.workbench-shell {
+  margin-top: 3.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  box-shadow: 0 16px 40px -8px rgba(20, 43, 64, 0.08);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.workbench-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.workbench-tab-btn {
+  padding: 1.35rem 1.5rem;
+  text-align: left;
+  border-right: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  color: var(--text-secondary);
+  background: transparent;
+  position: relative;
+}
+
+.workbench-tab-btn:last-child {
+  border-right: none;
+}
+
+.workbench-tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--text-primary);
+}
+
+.workbench-tab-btn.active {
+  background-color: var(--bg-white);
+  color: var(--color-teal);
+}
+
+.workbench-tab-btn.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-teal);
+  box-shadow: none;
+}
+
+.tab-code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  color: var(--color-teal);
+}
+
+.tab-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.workbench-tab-btn.active .tab-title {
+  color: var(--text-primary);
+}
+
+.workbench-panel {
+  display: none;
+  padding: 3.5rem;
+}
+
+.workbench-panel.active {
+  display: block;
+}
+
+.workbench-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.workbench-narrative h4 {
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.workbench-narrative p {
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.workbench-metrics-table {
+  background-color: var(--bg-dark-navy);
+  border: 1px solid rgba(215, 226, 233, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(16, 40, 61, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.workbench-visual-plate {
+  width: 100%;
+  height: clamp(260px, 26vw, 340px);
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-dark-navy-deep);
+}
+
+.workbench-visual-plate img,
+.wb-equipment-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: contrast(1.05) saturate(1.1);
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.wb-img-ultrasound {
+  object-position: center 42%;
+}
+
+.wb-img-ventilator {
+  object-position: center 36%;
+}
+
+.wb-img-surgical {
+  object-position: center center;
+}
+
+.wb-img-ivd {
+  object-position: center center;
+}
+
+.workbench-visual-plate:hover img {
+  transform: scale(1.03);
+}
+
+.workbench-specs-ledger {
+  padding: 1.25rem 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-dark-navy-deep);
+}
+
+/* Fallback if metric-row are direct children of workbench-metrics-table */
+.workbench-metrics-table > .metric-row:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.workbench-metrics-table > .metric-row {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
+.workbench-metrics-table > .metric-row:last-child {
+  margin-bottom: 1.5rem;
+}
+
+/* Unobstructed Cleanroom & Bioprocess Plates */
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.875rem;
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metric-key {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8FA4B5;
+}
+
+.metric-val {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-aqua);
+}
+
+/* --------------------------------------------------------------------------
+   Section 03: Certified Medical Devices & Clinical Systems
+   Very Light Cool Blue Canvas (#EAF2F6) with Pure Clean White Editorial Cards
+   -------------------------------------------------------------------------- */
+.section-pipeline-editorial {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: clamp(5.5rem, 8.5vw, 8.5rem) 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-pipeline-editorial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 480px;
+  background: radial-gradient(circle, rgba(22, 140, 145, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Editorial Header */
+.pipeline-editorial-header {
+  margin-bottom: 3.5rem;
+}
+
+.pipeline-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.pipeline-section-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.pipeline-hairline {
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-teal), transparent);
+}
+
+.pipeline-meta-scope {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.pipeline-title-group {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: end;
+}
+
+.pipeline-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.pipeline-lead-abstract {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Full-Width Biological Hero Plate */
+.pipeline-hero-cinematic {
+  margin: 3.5rem 0 5rem 0;
+}
+
+.pipeline-hero-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 16px 40px rgba(20, 43, 64, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.pipeline-hero-frame img {
+  width: 100%;
+  height: clamp(340px, 45vw, 540px);
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.04) saturate(1.05);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pipeline-hero-frame:hover img {
+  transform: scale(1.02);
+}
+
+.pipeline-hero-caption {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: 1.15rem;
+  max-width: 840px;
+}
+
+/* Editorial Flow Architecture */
+.pipeline-editorial-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-flow-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  margin: clamp(3.5rem, 6vw, 5.5rem) 0;
+}
+
+/* Candidate 1: Asymmetrical Lead Feature */
+.candidate-feature-lead {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  align-items: start;
+}
+
+.candidate-lead-headline-group .candidate-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.candidate-descriptor,
+.candidate-clade-name {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--color-teal);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.candidate-narrative-prose {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Editorial Annotation Micro-Ledger */
+.editorial-annotation-ledger {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.annotation-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.annotation-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-teal);
+}
+
+.annotation-value {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.annotation-status-discreet {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  line-height: 1.45;
+}
+
+.annotation-status-discreet::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-teal);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Candidate 2: Inset Editorial Spread */
+.candidate-feature-inset {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2.5rem, 4vw, 3.75rem);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-feature-inset .candidate-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.annotation-trio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Candidate 3: Asymmetrical Split Spread with Specimen Notes */
+.candidate-feature-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.candidate-feature-split .candidate-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.candidate-specimen-sidebar {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--color-teal);
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.specimen-header {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.specimen-summary {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Candidate 4: Atmospheric Full-Bleed Monograph */
+.candidate-feature-monograph {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2.5rem, 4vw, 4rem);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-feature-monograph .candidate-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+/* --------------------------------------------------------------------------
+   Section 03: Candidate Visual Plates & Editorial Layouts
+   -------------------------------------------------------------------------- */
+.candidate-visual-plate {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  box-shadow: 0 8px 24px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-visual-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.candidate-feature-hero:hover .candidate-visual-plate img,
+.candidate-feature-inset:hover .candidate-visual-plate img,
+.candidate-feature-split:hover .candidate-visual-plate img,
+.candidate-feature-monograph:hover .candidate-visual-plate img {
+  transform: scale(1.025);
+}
+
+/* Candidate 1: Hero Spread with Visual Plate */
+.candidate-feature-hero {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 3.5vw, 3.5rem);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-hero-grid {
+  display: grid;
+  grid-template-columns: 340px 1.25fr 1fr;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.candidate-feature-hero .candidate-visual-plate {
+  height: 320px;
+}
+
+/* Candidate 2: Inset Spread with Visual Plate */
+.candidate-feature-inset {
+  display: grid;
+  grid-template-columns: 300px 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: clamp(2rem, 3.5vw, 3.25rem);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-feature-inset .candidate-visual-plate {
+  height: 260px;
+}
+
+/* Candidate 3: Asymmetrical Split Spread with Visual Plate */
+.candidate-feature-split {
+  display: grid;
+  grid-template-columns: 300px 1.25fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  padding: clamp(2rem, 3.5vw, 3.25rem);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-feature-split .candidate-visual-plate {
+  height: 100%;
+  min-height: 270px;
+}
+
+/* Candidate 4: Monograph Spread with Visual Plate */
+.candidate-feature-monograph {
+  display: grid;
+  grid-template-columns: 300px 1.25fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: clamp(2rem, 3.5vw, 3.25rem);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(20, 43, 64, 0.06);
+}
+
+.candidate-feature-monograph .candidate-visual-plate {
+  height: 260px;
+}
+
+@media (max-width: 1200px) {
+  .candidate-hero-grid,
+  .candidate-feature-inset,
+  .candidate-feature-split,
+  .candidate-feature-monograph {
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+  }
+  .candidate-hero-grid .candidate-secondary-ledger,
+  .candidate-feature-inset .candidate-inset-ledger,
+  .candidate-feature-split .candidate-specimen-sidebar,
+  .candidate-feature-monograph .candidate-monograph-ledger {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidate-hero-grid,
+  .candidate-feature-inset,
+  .candidate-feature-split,
+  .candidate-feature-monograph {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .candidate-hero-grid .candidate-secondary-ledger,
+  .candidate-feature-inset .candidate-inset-ledger,
+  .candidate-feature-split .candidate-specimen-sidebar,
+  .candidate-feature-monograph .candidate-monograph-ledger {
+    grid-column: auto;
+  }
+  .candidate-feature-hero .candidate-visual-plate,
+  .candidate-feature-inset .candidate-visual-plate,
+  .candidate-feature-split .candidate-visual-plate,
+  .candidate-feature-monograph .candidate-visual-plate {
+    height: 220px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .pipeline-title-group,
+  .candidate-feature-lead,
+  .candidate-feature-inset,
+  .candidate-feature-split,
+  .candidate-feature-monograph {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .candidate-feature-inset,
+  .candidate-feature-monograph {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .editorial-annotation-ledger,
+  .annotation-trio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section 04: Executive Leadership & Scientific Governance
+   Clean Medical White Canvas (#F7FAFC) with Pure Clean White Corporate Profile Cards
+   -------------------------------------------------------------------------- */
+.section-leadership {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Executive Spotlight Card (Britney) */
+.executive-spotlight-card {
+  margin-top: 3.5rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
+  box-shadow: 0 16px 40px -8px rgba(20, 43, 64, 0.08);
+}
+
+.executive-portrait-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.executive-portrait-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(20, 43, 64, 0.12);
+  border: 1px solid var(--border-color);
+  height: 100%;
+  min-height: 540px;
+  flex: 1;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.executive-portrait-frame:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 16px 36px rgba(22, 140, 145, 0.25);
+}
+
+.executive-portrait-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.executive-portrait-frame:hover img {
+  transform: scale(1.025);
+}
+
+.executive-portrait-glass-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.25rem 1.5rem 1.25rem 1.5rem;
+  background: linear-gradient(180deg, rgba(6, 15, 30, 0) 0%, rgba(6, 15, 30, 0.9) 35%, rgba(6, 15, 30, 0.98) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.portrait-bar-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.portrait-bar-role {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #94A3B8;
+  margin-top: 0.2rem;
+}
+
+.portrait-bar-location {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.portrait-bar-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  background: rgba(22, 140, 145, 0.18);
+  color: var(--color-aqua);
+  border: 1px solid rgba(22, 140, 145, 0.35);
+  border-radius: var(--radius-xs);
+  margin-bottom: 0.25rem;
+}
+
+.portrait-bar-city {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #CBD5E1;
+}
+
+.executive-details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.executive-header-group {
+  margin-bottom: 1.5rem;
+}
+
+.executive-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-teal);
+  margin-bottom: 0.5rem;
+}
+
+.executive-display-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.executive-primary-title {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--color-teal);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.executive-quote-statement {
+  position: relative;
+  background: var(--bg-primary);
+  border-left: 3px solid var(--color-teal);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  padding: 1.25rem 1.75rem;
+  margin: 1.25rem 0 1.5rem 0;
+}
+
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 0;
+  position: absolute;
+  top: 1.1rem;
+  left: 0.75rem;
+  color: rgba(22, 140, 145, 0.35);
+}
+
+.quote-text {
+  font-family: var(--font-sans);
+  font-size: 0.985rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.executive-narrative-copy p {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  max-width: 68ch;
+}
+
+.executive-qualifications-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin: 1.25rem 0 2rem 0;
+}
+
+.qual-cell {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.qual-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.qual-value {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.executive-interactive-actions,
+.executive-action-bar {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-dossier-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.75rem;
+  background: var(--color-teal);
+  color: #FFFFFF;
+  border: 1px solid var(--color-teal);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(22, 140, 145, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-dossier-trigger:hover {
+  background: var(--color-teal-dark);
+  border-color: var(--color-teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 140, 145, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-dossier-trigger svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-dossier-trigger:hover svg {
+  transform: translateX(4px);
+}
+
+.dossier-access-note {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Scientific Advisory Board & Governance Council */
+.scientific-governance-block {
+  margin-top: 5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.scientific-governance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gov-sub-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-teal);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.gov-sub-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.gov-header-desc {
+  max-width: 460px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.scientific-council-grid,
+.advisory-council-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.council-member-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.75rem 1.75rem 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(20, 43, 64, 0.06);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.council-member-card:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 14px 36px rgba(20, 43, 64, 0.12);
+}
+
+.council-portrait-mount {
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+.council-avatar-ring {
+  width: 216px;
+  height: 216px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 1px var(--border-color),
+              0 0 0 6px rgba(22, 140, 145, 0.15),
+              0 12px 28px rgba(20, 43, 64, 0.12);
+  border: 3px solid var(--color-teal);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.council-member-card:hover .council-avatar-ring {
+  border-color: var(--color-teal-dark);
+  box-shadow: 0 0 0 1px var(--color-teal),
+              0 0 0 8px rgba(22, 140, 145, 0.25),
+              0 16px 36px rgba(20, 43, 64, 0.18);
+}
+
+.advisor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.council-member-card:hover .advisor-photo {
+  transform: scale(1.04);
+}
+
+.advisor-mercer {
+  object-position: center 18%;
+  transform: scale(1.0);
+}
+
+.advisor-rostova {
+  object-position: center 14%;
+  transform: scale(1.38);
+  transform-origin: center 18%;
+}
+
+.advisor-vance {
+  object-position: center 16%;
+  transform: scale(1.18);
+  transform-origin: center 20%;
+}
+
+.council-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.council-role-badge {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-teal);
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.council-member-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.council-member-pedigree {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--color-teal);
+  margin-bottom: 1.15rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.council-card-divider {
+  width: 44px;
+  height: 1px;
+  background: var(--border-color);
+  margin-bottom: 1.15rem;
+}
+
+.council-member-bio {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.council-domain-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-teal);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+}
+
+.btn-advisor-modal-trigger {
+  margin-top: 1.25rem;
+  background: var(--bg-white);
+  border: 1px solid var(--color-teal);
+  color: var(--color-teal);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-advisor-modal-trigger:hover,
+.council-member-card:hover .btn-advisor-modal-trigger {
+  background: var(--color-teal);
+  border-color: var(--color-teal);
+  color: #FFFFFF;
+}
+
+.btn-advisor-modal-trigger svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-advisor-modal-trigger:hover svg {
+  transform: translateX(3px);
+}
+/* --------------------------------------------------------------------------
+   Section 05: Quality, Regulatory & Compliance Ledgers
+   Canvas: Pure Clean White (#FFFFFF)
+   -------------------------------------------------------------------------- */
+.standards-quad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 3.5rem;
+}
+
+.standard-card {
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  padding: 2.25rem 1.75rem;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.standard-card:hover {
+  border-color: var(--color-teal);
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.standard-code {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.standard-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.standard-desc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Section 06: Institutional Liaison & Commercial Inquiries
+   Canvas: Deep Midnight Navy Canvas (#10283D) High-Impact Contrast Anchor
+   Aesthetic: Prestige International Executive Headquarters & Channels
+   -------------------------------------------------------------------------- */
+.section-liaison {
+  background-color: var(--bg-dark-navy);
+  border-bottom: 1px solid rgba(215, 226, 233, 0.15);
+  position: relative;
+}
+
+.liaison-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: 3rem;
+  align-items: start;
+}
+
+/* Column Architecture */
+.liaison-col-primary,
+.liaison-col-secondary {
+  display: flex;
+  flex-direction: column;
+}
+
+.liaison-pane-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.liaison-pane-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-aqua);
+  margin-bottom: 0.4rem;
+}
+
+.liaison-pane-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.liaison-pane-lead {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: #D7E2E9;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Left Column: HQ Details & Map */
+.liaison-hq-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hq-address-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hq-entity {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.hq-street {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #D7E2E9;
+}
+
+.hq-hours-block {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hq-hours-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-aqua);
+  font-weight: 600;
+}
+
+.hq-hours-value {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.liaison-map-container {
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  border: 1px solid rgba(215, 226, 233, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-dark-navy-deep);
+}
+
+.liaison-map-container iframe {
+  display: block;
+  width: 100%;
+}
+
+/* Right Column: Department Listings (Clean Editorial Rows, Not Nested Cards) */
+.liaison-depts-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.liaison-dept-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color var(--transition-fast);
+}
+
+.liaison-dept-row:first-child {
+  padding-top: 0;
+}
+
+.liaison-dept-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dept-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dept-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.dept-scope {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dept-email-display {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-aqua);
+  width: fit-content;
+  margin-top: 0.2rem;
+  user-select: text;
+  cursor: default;
+}
+
+/* Full-Width Institutional Confidentiality Strip */
+.liaison-confidentiality-strip {
+  margin-top: 3.5rem;
+  padding: 1.75rem 2rem;
+  background: var(--bg-dark-navy-deep);
+  border: 1px solid rgba(215, 226, 233, 0.2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.confidentiality-header-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.confidentiality-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-aqua);
+}
+
+.confidentiality-abstract {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: #D7E2E9;
+  margin: 0;
+}
+
+.confidentiality-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.confidentiality-point {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: #D7E2E9;
+  line-height: 1.5;
+}
+
+.point-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-aqua);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Executive Curriculum Vitae Modal (Britney's Complete Dossier)
+   Clinical Pure White Window with Sophisticated Precision Surfaces
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(16, 40, 61, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-window {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(16px);
+  transition: transform var(--transition-fast);
+  box-shadow: 0 24px 64px -10px rgba(16, 40, 61, 0.35);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.modal-overlay.active .modal-window {
+  transform: translateY(0);
+}
+
+.modal-head {
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-head-title h3 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.modal-head-title p {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.modal-close-trigger {
+  font-size: 1.75rem;
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.modal-close-trigger:hover {
+  color: var(--text-primary);
+}
+
+.modal-tabs-strip {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 2rem;
+  overflow-x: auto;
+}
+
+.modal-tab-btn {
+  padding: 1.15rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.modal-tab-btn.active {
+  color: var(--color-teal);
+  border-bottom-color: var(--color-teal);
+  background-color: var(--bg-white);
+}
+
+.modal-body-content {
+  padding: 3rem 2.5rem;
+  overflow-y: auto;
+  line-height: 1.85;
+  background-color: var(--bg-white);
+}
+
+.tab-pane-content {
+  display: none;
+}
+
+.tab-pane-content.active {
+  display: block;
+}
+
+.tab-pane-content h4 {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.tab-pane-content p {
+  font-size: 0.975rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.modal-callout-quote {
+  padding: 1.5rem 1.75rem;
+  background-color: var(--bg-primary);
+  border-left: 3px solid var(--color-teal);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 1.75rem 0;
+}
+
+/* Scientific Advisory Council Dossier Modals */
+.advisor-modal-window {
+  max-width: 860px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+}
+
+.advisor-modal-body {
+  padding: 2.25rem 2.5rem;
+  max-height: calc(88vh - 110px);
+  overflow-y: auto;
+  background-color: var(--bg-white);
+}
+
+.advisor-modal-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.75rem;
+}
+
+.advisor-modal-portrait {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-teal);
+  box-shadow: 0 0 0 4px rgba(22, 140, 145, 0.15), 0 10px 24px rgba(20, 43, 64, 0.1);
+  flex-shrink: 0;
+  background-color: var(--bg-secondary);
+}
+
+.advisor-modal-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.advisor-modal-lead {
+  flex: 1;
+}
+
+.advisor-modal-role {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-teal);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.advisor-modal-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.advisor-modal-institution {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  margin-bottom: 0.85rem;
+}
+
+.advisor-modal-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.advisor-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--color-teal);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-xs);
+}
+
+.advisor-dossier-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.advisor-section-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.advisor-section-title::before {
+  content: '';
+  width: 3px;
+  height: 15px;
+  background-color: var(--color-teal);
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.advisor-dossier-section p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 0.85rem;
+  font-weight: 400;
+}
+
+.advisor-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-left: 0;
+}
+
+.advisor-bullet-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.925rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.advisor-bullet-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: bold;
+}
+
+.advisor-bullet-list strong {
+  color: #142B40;
+  font-weight: 600;
+}
+
+.advisor-bullet-list em {
+  color: var(--color-teal);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.advisor-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+.advisor-skill-cell {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.95rem 1.15rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.advisor-skill-cell:hover {
+  background: #E2ECF2;
+  border-color: var(--color-teal);
+}
+
+.skill-name {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #142B40;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+.skill-desc {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .advisor-modal-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .advisor-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advisor-modal-body {
+    padding: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Back to Top Trigger
+   -------------------------------------------------------------------------- */
+.back-to-top-trigger {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(20, 43, 64, 0.15);
+  border-radius: var(--radius-xs);
+}
+
+.back-to-top-trigger.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top-trigger:hover {
+  background-color: var(--color-teal);
+  color: #FFFFFF;
+  border-color: var(--color-teal);
+  box-shadow: 0 6px 20px rgba(22, 140, 145, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Colophon & Institutional Footer
+   Canvas: Deepest Midnight Navy (#0B1B2B)
+   -------------------------------------------------------------------------- */
+.site-colophon {
+  background-color: var(--bg-dark-navy-deep);
+  border-top: 1px solid rgba(215, 226, 233, 0.15);
+  padding: 5.5rem 0 3rem 0;
+}
+
+.colophon-grid {
+  display: grid;
+  grid-template-columns: 1.8fr repeat(3, 1fr);
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.colophon-brand p {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #8FA4B5;
+  margin-top: 1.25rem;
+  max-width: 360px;
+}
+
+.colophon-map-wrapper {
+  margin-top: 0.85rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(215, 226, 233, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-dark-navy);
+}
+
+.colophon-map-wrapper iframe {
+  display: block;
+  width: 100%;
+}
+
+.colophon-heading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.colophon-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.colophon-links a {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 400;
+  color: #8FA4B5;
+}
+
+.colophon-links a:hover {
+  color: var(--color-aqua);
+}
+
+.colophon-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #647789;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility & Focus Standards
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-statement-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .panoramic-frame {
+    height: 320px;
+  }
+
+  .hero-overlapping-specs-card {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .hero-buffer-space {
+    display: none;
+  }
+
+  .matrix-grid-asymmetric {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-card.span-12,
+  .matrix-card.span-6 {
+    grid-column: span 1;
+  }
+
+  .workbench-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workbench-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .workbench-visual-plate {
+    height: clamp(250px, 42vw, 380px);
+  }
+
+  .executive-spotlight-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+
+  .executive-portrait-wrapper {
+    height: auto;
+  }
+
+  .executive-portrait-frame {
+    height: 480px;
+    min-height: 480px;
+  }
+
+  .scientific-council-grid,
+  .advisory-council-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .scientific-governance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .standards-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .liaison-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .colophon-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .site-masthead .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .brand-masthead {
+    margin-right: 1rem;
+  }
+
+  .brand-text-wrap {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-descriptor {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+  }
+
+  .site-masthead nav {
+    margin: 0 0.85rem;
+  }
+
+  .masthead-nav {
+    gap: 1.25rem;
+  }
+
+  .masthead-link {
+    font-size: 0.8125rem;
+    padding: 0.45rem 0.15rem;
+  }
+
+  .masthead-actions {
+    margin-left: 1rem;
+  }
+
+  .masthead-liaison-btn {
+    padding: 0.52rem 1.1rem;
+    font-size: 0.775rem;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 64px;
+  }
+
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  section[id] {
+    scroll-margin-top: 86px;
+  }
+
+  .site-masthead .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .masthead-inner {
+    height: 64px;
+  }
+
+  .masthead-liaison-btn.desktop-only {
+    display: none !important;
+  }
+
+  .mobile-cta-item {
+    display: block;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .mobile-cta-btn {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .site-masthead .masthead-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+    gap: 0.25rem;
+    box-shadow: 0 20px 40px rgba(20, 43, 64, 0.12);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+
+  .site-masthead .masthead-nav.open {
+    display: flex;
+  }
+
+  .site-masthead .masthead-nav .masthead-link:not(.mobile-cta-btn) {
+    display: block;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.5rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .site-masthead .masthead-nav .masthead-link:not(.mobile-cta-btn):hover,
+  .site-masthead .masthead-nav .masthead-link:not(.mobile-cta-btn).active {
+    color: var(--color-teal);
+  }
+
+  .site-masthead .masthead-nav .masthead-link::after {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .confidentiality-points-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .liaison-confidentiality-strip {
+    padding: 1.35rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .panoramic-frame {
+    height: 240px;
+  }
+
+  .workbench-panel {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .workbench-visual-plate {
+    height: clamp(220px, 48vw, 340px);
+  }
+
+  .workbench-specs-ledger {
+    padding: 1.15rem 1.25rem 1.25rem;
+  }
+
+  .standards-quad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .colophon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .council-avatar-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Mobile Typography & Layout Refinements */
+  .section-header-block {
+    margin-bottom: 2.5rem;
+  }
+
+  .executive-spotlight-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .executive-display-name {
+    font-size: 2.15rem;
+  }
+
+  .executive-primary-title {
+    font-size: 1rem;
+  }
+
+  .executive-qualifications-matrix {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .executive-interactive-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .executive-interactive-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .colophon-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+
+  .site-masthead .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .masthead-inner {
+    height: 60px;
+  }
+
+  .brand-text-wrap {
+    gap: 0.35rem;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+  }
+
+  .brand-descriptor {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+
+  .site-masthead .masthead-nav {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+  }
+
+  .mobile-toggle-btn {
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+  }
+
+  .hero-main-title {
+    font-size: 2.05rem;
+    line-height: 1.18;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .chapter-headline {
+    font-size: 1.55rem;
+  }
+
+  .candidate-lead-headline-group .candidate-title {
+    font-size: 1.55rem;
+  }
+
+  .gov-sub-title {
+    font-size: 1.35rem;
+  }
+
+  .council-member-name {
+    font-size: 1.2rem;
+  }
+
+  .workbench-panel {
+    padding: 1.65rem 1rem;
+  }
+
+  .workbench-visual-plate {
+    height: clamp(200px, 56vw, 260px);
+  }
+
+  .workbench-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .workbench-tab-btn {
+    padding: 0.95rem 1.15rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-dark-hairline);
+  }
+
+  .workbench-tab-btn:last-child {
+    border-bottom: none;
+  }
+
+  .workbench-specs-ledger {
+    padding: 1rem 1rem 1.15rem;
+  }
+
+  .metric-row {
+    font-size: 0.8rem;
+    padding: 0.7rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-text-wrap {
+    gap: 0.25rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+
+  .brand-descriptor {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+
+
